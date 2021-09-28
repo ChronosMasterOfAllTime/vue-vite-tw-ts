@@ -5,8 +5,10 @@ import HelloWorld from '@/components/HelloWorld.vue'
 </script>
 
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld class="bg-white dark:bg-gray-800" msg="Hello Vue 3 + TypeScript + Vite" />
+  <div class="bg-white dark:bg-gray-800 dark:text-white text-gray-800 text-center h-screen w-screen">
+    <img class="pt-10 mx-auto" alt="Vue logo" src="./assets/logo.png" />
+    <HelloWorld msg="Hello Vue 3 + TypeScript + Vite + Tailwind CSS" />
+  </div>
 </template>
 
 <style>
@@ -14,8 +16,5 @@ import HelloWorld from '@/components/HelloWorld.vue'
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
