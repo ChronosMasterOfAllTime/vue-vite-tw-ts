@@ -1,14 +1,18 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { useStateStore } from '@/store'
+import { computed, ref } from 'vue'
+import { TButton } from '@variantjs/vue'
 
 defineProps<{ msg: string }>()
 
-const count = ref(0)
+const store = useStateStore()
+
+const count = computed(() => store.getters.count)
+const increment = () => store.dispatch('increment')
 </script>
 
 <template>
   <h1>{{ msg }}</h1>
-
   <p>
     Recommended IDE setup:
     <a href="https://code.visualstudio.com/" target="_blank">VSCode</a>
@@ -25,8 +29,12 @@ const count = ref(0)
     |
     <a href="https://v3.vuejs.org/" target="_blank">Vue 3 Docs</a>
   </p>
-
-  <button type="button" @click="count++">count is: {{ count }}</button>
+  <t-button class="capitalize mx-auto my-2" @click="increment">
+    <b>Click me</b>
+  </t-button>
+  <div class="mb-2">
+    <b class="capitalize">click count is: {{ count }}</b>
+  </div>
   <p>
     Edit
     <code>components/HelloWorld.vue</code> to test hot module replacement.
