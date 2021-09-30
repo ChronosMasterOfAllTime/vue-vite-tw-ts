@@ -28,6 +28,22 @@ const increment = () => store.dispatch('increment')
     </a>
     |
     <a href="https://v3.vuejs.org/" target="_blank">Vue 3 Docs</a>
+    |
+    <a href="https://next.vuex.vuejs.org/guide/" target="_blank">
+      Vuex Next Docs
+    </a>
+    |
+    <a href="https://next.router.vuejs.org/guide/" target="_blank">
+      Vue Router Next Docs
+    </a>
+    |
+    <a href="https://tailwindui.com" target="_blank">Tailwind UI Docs</a>
+    |
+    <a href="https://tailwindcss.com/docs" target="_blank">Tailwind CSS Docs</a>
+    |
+    <a href="https://github.com/variantjs/vue" target="_blank">
+      VariantJS Docs
+    </a>
   </p>
   <t-button class="capitalize mx-auto my-2" @click="increment">
     <b>Click me</b>
