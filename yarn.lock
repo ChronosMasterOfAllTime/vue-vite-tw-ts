@@ -358,13 +358,6 @@
   resolved "https://registry.yarnpkg.com/@variantjs/core/-/core-0.0.39.tgz#0592a9cf5bac88f301d8c21cb9edb95e172b6071"
   integrity sha512-0yxCeFpz0fnGu71PcppYP4jkczcJcRNz2BZgpR3ugnR/Dbxa7NGnProDm6hXzVDfacAo46EwXUOmvilBQc7CxA==
 
-"@variantjs/vue@^0.0.3-35":
-  version "0.0.3-35"
-  resolved "https://registry.yarnpkg.com/@variantjs/vue/-/vue-0.0.3-35.tgz#cc1d054453d046e40c8e4099fc8fc44ebbd4bc0d"
-  integrity sha512-O3NchHhh9LfcNRf5ppgYdFzR17OkLLTobN/Ih2PAayUtMpcGxfXJppDosEBOSEcApl/jvDWGVAfUAYU/c405Zw==
-  dependencies:
-    "@variantjs/core" "^0.0.39"
-
 "@variantjs/vue@^0.0.4":
   version "0.0.4"
   resolved "https://registry.yarnpkg.com/@variantjs/vue/-/vue-0.0.4.tgz#5ed501d9c53af4bb6d8d801efd3a22185b820f7e"
@@ -2230,6 +2223,11 @@ postcss-scss@^2.1.1:
   integrity sha512-jQmGnj0hSGLd9RscFw9LyuSVAa5Bl1/KBPqG1NQw9w8ND55nY4ZEsdlVuYJvLPpV+y0nwTV5v/4rHPzZRihQbA==
   dependencies:
     postcss "^7.0.6"
+
+postcss-scss@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/postcss-scss/-/postcss-scss-4.0.1.tgz#6f5827f4457dac35fcc5a0b3de566cfb377db1e7"
+  integrity sha512-7QghUu2l07OyVFT5LyvU/QJ1f2s8IL0mfToN69Yu533PgMZm2B1S6hYd4bao8tFq70r3P5MmAbKhVrZ4wOADxg==
 
 postcss-selector-parser@^6.0.2, postcss-selector-parser@^6.0.4, postcss-selector-parser@^6.0.5, postcss-selector-parser@^6.0.6:
   version "6.0.6"
