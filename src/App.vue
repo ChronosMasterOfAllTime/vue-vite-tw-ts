@@ -13,7 +13,11 @@
       w-screen
     "
   >
-    <img class="pt-10 mx-auto" alt="Vue logo" src="./assets/logo.png" />
+    <img
+      class="pt-10 mx-auto mb-4"
+      alt="Chronos logo"
+      src="./assets/chronos.jpg"
+    />
     <router-view />
   </div>
 </template>
