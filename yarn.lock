@@ -274,6 +274,11 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
+"@popperjs/core@^2.10.1":
+  version "2.10.1"
+  resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.10.1.tgz#728ecd95ab207aab8a9a4e421f0422db329232be"
+  integrity sha512-HnUhk1Sy9IuKrxEMdIRCxpIqPw6BFsbYSEUO9p/hNw5sMld/+3OLMWQP80F8/db9qsv3qUjs7ZR5bS/R+iinXw==
+
 "@stylelint/postcss-css-in-js@^0.37.2":
   version "0.37.2"
   resolved "https://registry.yarnpkg.com/@stylelint/postcss-css-in-js/-/postcss-css-in-js-0.37.2.tgz#7e5a84ad181f4234a2480803422a47b8749af3d2"
@@ -347,6 +352,25 @@
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/@types/unist/-/unist-2.0.6.tgz#250a7b16c3b91f672a24552ec64678eeb1d3a08d"
   integrity sha512-PBjIUxZHOuj0R15/xuwJYjFi+KZdNFrehocChv4g5hu6aFroHue8m0lBP0POdK2nKzbw0cgV1mws8+V/JAcEkQ==
+
+"@variantjs/core@^0.0.39":
+  version "0.0.39"
+  resolved "https://registry.yarnpkg.com/@variantjs/core/-/core-0.0.39.tgz#0592a9cf5bac88f301d8c21cb9edb95e172b6071"
+  integrity sha512-0yxCeFpz0fnGu71PcppYP4jkczcJcRNz2BZgpR3ugnR/Dbxa7NGnProDm6hXzVDfacAo46EwXUOmvilBQc7CxA==
+
+"@variantjs/vue@^0.0.3-35":
+  version "0.0.3-35"
+  resolved "https://registry.yarnpkg.com/@variantjs/vue/-/vue-0.0.3-35.tgz#cc1d054453d046e40c8e4099fc8fc44ebbd4bc0d"
+  integrity sha512-O3NchHhh9LfcNRf5ppgYdFzR17OkLLTobN/Ih2PAayUtMpcGxfXJppDosEBOSEcApl/jvDWGVAfUAYU/c405Zw==
+  dependencies:
+    "@variantjs/core" "^0.0.39"
+
+"@variantjs/vue@^0.0.4":
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/@variantjs/vue/-/vue-0.0.4.tgz#5ed501d9c53af4bb6d8d801efd3a22185b820f7e"
+  integrity sha512-6Uf0jXmRKqHilHvziGIi6pZP+1/+dHuK0NmHR9EFekrjYzSskB13vESddq2UHRaDvZD+iwvpSUuYdE9I4U2jXg==
+  dependencies:
+    "@variantjs/core" "^0.0.39"
 
 "@vitejs/plugin-vue@^1.6.1":
   version "1.6.1"
