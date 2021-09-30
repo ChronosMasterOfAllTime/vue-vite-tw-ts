@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useStateStore } from '@/store'
-import { computed, ref } from 'vue'
+import { computed } from 'vue'
 import { TButton } from '@variantjs/vue'
 
 defineProps<{ msg: string }>()
