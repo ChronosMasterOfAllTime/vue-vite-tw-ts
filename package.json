@@ -10,7 +10,8 @@
     "@headlessui/vue": "^1.4.1",
     "@heroicons/vue": "^1.0.4",
     "vue": "^3.2.6",
-    "vue-router": "^4.0.11"
+    "vue-router": "4",
+    "vuex": "^4.0.2"
   },
   "devDependencies": {
     "@tailwindcss/aspect-ratio": "^0.2.1",
@@ -28,5 +29,8 @@
     "vite": "^2.5.4",
     "vite-tsconfig-paths": "^3.3.14",
     "vue-tsc": "^0.2.2"
+  },
+  "resolutions": {
+    "vscode-vue-languageservice": "0.27.26"
   }
 }
