@@ -6,7 +6,7 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: () => import('@/components/HelloWorld.vue'),
+      component: () => import('@/views/HelloWorld.vue'),
       props: {
         msg: 'Hello Vue 3 + TypeScript + Vite + Tailwind CSS/UI + Vuex + Vue Router'
       }

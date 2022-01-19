@@ -53,7 +53,7 @@ const increment = () => store.dispatch('increment')
   </div>
   <p>
     Edit
-    <code>components/HelloWorld.vue</code> to test hot module replacement.
+    <code>views/HelloWorld.vue</code> to test hot module replacement.
   </p>
 </template>
 
