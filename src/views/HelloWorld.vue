@@ -1,14 +1,11 @@
 <script setup lang="ts">
-import { useStateStore } from '@/store'
-import { computed } from 'vue'
+import { useMainStore } from '@/store'
 import { TButton } from '@variantjs/vue'
 
 defineProps<{ msg: string }>()
 
-const store = useStateStore()
+const main = useMainStore()
 
-const count = computed(() => store.getters.count)
-const increment = () => store.dispatch('increment')
 </script>
 
 <template>
@@ -29,8 +26,8 @@ const increment = () => store.dispatch('increment')
     |
     <a href="https://v3.vuejs.org/" target="_blank">Vue 3 Docs</a>
     |
-    <a href="https://next.vuex.vuejs.org/guide/" target="_blank">
-      Vuex Next Docs
+    <a href="https://pinia.vuejs.org/introduction.html" target="_blank">
+      Pinia Docs
     </a>
     |
     <a href="https://next.router.vuejs.org/guide/" target="_blank">
@@ -45,11 +42,11 @@ const increment = () => store.dispatch('increment')
       VariantJS Docs
     </a>
   </p>
-  <t-button class="capitalize mx-auto my-2" @click="increment">
+  <TButton class="capitalize mx-auto my-2" @click="main.incrementCounter(1)">
     <b>Click me</b>
-  </t-button>
+  </TButton>
   <div class="mb-2">
-    <b class="capitalize">click count is: {{ count }}</b>
+    <b class="capitalize">click count is: {{ main.count }}</b>
   </div>
   <p>
     Edit
