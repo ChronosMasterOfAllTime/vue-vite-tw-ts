@@ -31,6 +31,7 @@
     "@vue/compiler-sfc": "^3.2.31",
     "@vue/test-utils": "^2.0.0-rc.17",
     "autoprefixer": "^10.4.2",
+    "c8": "^7.11.0",
     "happy-dom": "^2.41.0",
     "postcss": "^8.4.6",
     "postcss-scss": "^4.0.3",
