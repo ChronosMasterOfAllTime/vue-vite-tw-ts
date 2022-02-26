@@ -17,10 +17,20 @@
     "sourceMap": true,
     "baseUrl": ".",
     "lib": ["esnext", "dom"],
+    "types": ["jest", "vitest/globals"],
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["src/*"],
+      "@test/*": ["test/*"]
     }
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
+  "include": [
+    "src/**/*.ts", 
+    "src/**/*.d.ts", 
+    "src/**/*.tsx", 
+    "src/**/*.vue",
+    "test/unit/**/*.ts",
+    "test/unit/**/*.d.ts",
+    "test/unit/**/*.tsx",
+    "test/unit/**/*.vue"],
   "exclude": ["node_modules", "dist/**/*"]
 }
