@@ -17,7 +17,7 @@
     "sourceMap": true,
     "baseUrl": ".",
     "lib": ["esnext", "dom"],
-    "types": ["jest", "vitest/globals"],
+    "types": ["vitest/globals"],
     "paths": {
       "@/*": ["src/*"],
       "@test/*": ["test/*"]
