@@ -7,7 +7,9 @@
     "build": "vue-tsc --noEmit && vite build",
     "serve": "vite preview",
     "test": "vitest",
-    "coverage": "vitest run --coverage"
+    "coverage": "vitest run --coverage",
+    "lint": "eslint --ext .js,.vue,.ts --ignore-path .gitignore --fix src",
+    "format": "prettier . --write"
   },
   "dependencies": {
     "@headlessui/vue": "^1.5.0",
@@ -25,12 +27,17 @@
     "@tailwindcss/aspect-ratio": "^0.4.0",
     "@tailwindcss/forms": "^0.4.0",
     "@tailwindcss/typography": "^0.5.2",
+    "@typescript-eslint/eslint-plugin": "^5.12.1",
+    "@typescript-eslint/parser": "^5.12.1",
     "@vitejs/plugin-vue": "^2.2.2",
     "@vitest/ui": "^0.5.7",
     "@vue/compiler-sfc": "^3.2.31",
     "@vue/test-utils": "^2.0.0-rc.17",
     "autoprefixer": "^10.4.2",
     "c8": "^7.11.0",
+    "eslint": "^8.10.0",
+    "eslint-config-prettier": "^8.4.0",
+    "eslint-plugin-vue": "^8.5.0",
     "happy-dom": "^2.41.0",
     "postcss": "^8.4.6",
     "postcss-scss": "^4.0.3",
