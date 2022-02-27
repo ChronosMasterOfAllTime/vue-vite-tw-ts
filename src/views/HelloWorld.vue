@@ -9,18 +9,17 @@ const main = useMainStore()
 
 const message = computed(() => {
   if (main.count >= 60) return "It's broken!"
-  if (main.count > 50) return "Uh-oh"
-  if (main.count > 30) return "Slow Down.."
-  if (main.count > 10) return "Great Job!"
-  return "Click Me"
+  if (main.count > 50) return 'Uh-oh'
+  if (main.count > 30) return 'Slow Down..'
+  if (main.count > 10) return 'Great Job!'
+  return 'Click Me'
 })
 
 const variant = computed(() => {
-  if (main.count >= 60) return "error"
-  if (main.count > 10) return "success"
-  return "default"
+  if (main.count >= 60) return 'error'
+  if (main.count > 10) return 'success'
+  return 'default'
 })
-
 </script>
 
 <template>
@@ -57,7 +56,12 @@ const variant = computed(() => {
       VariantJS Docs
     </a>
   </p>
-  <TButton :variant="variant" :disabled="variant === 'error'" class="capitalize mx-auto my-2" @click="main.incrementCounter(1)">
+  <TButton
+    :variant="variant"
+    :disabled="variant === 'error'"
+    class="capitalize mx-auto my-2"
+    @click="main.incrementCounter(1)"
+  >
     <b>{{ message }}</b>
   </TButton>
   <p>

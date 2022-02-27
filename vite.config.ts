@@ -6,7 +6,7 @@ import tsconfigPaths from 'vite-tsconfig-paths'
 export default defineConfig({
   plugins: [vue(), tsconfigPaths()],
   test: {
-    environment: "happy-dom",
-    globals: true 
+    environment: 'happy-dom',
+    globals: true
   }
 })

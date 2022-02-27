@@ -6,13 +6,7 @@
 
 <template>
   <div
-    class="
-      bg-white
-      dark:bg-gray-800 dark:text-white
-      text-gray-800 text-center
-      h-screen
-      w-screen
-    "
+    class="bg-white dark:bg-gray-800 dark:text-white text-gray-800 text-center h-screen w-screen"
   >
     <img
       class="pt-10 mx-auto mb-4"
