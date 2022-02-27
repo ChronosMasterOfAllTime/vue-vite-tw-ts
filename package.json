@@ -9,7 +9,7 @@
     "test": "vitest",
     "coverage": "vitest run --coverage",
     "lint": "eslint --ext .js,.vue,.ts --ignore-path .gitignore --fix src",
-    "format": "prettier . --write"
+    "format": "prettier src test --write"
   },
   "dependencies": {
     "@headlessui/vue": "^1.5.0",
@@ -41,6 +41,7 @@
     "happy-dom": "^2.41.0",
     "postcss": "^8.4.6",
     "postcss-scss": "^4.0.3",
+    "prettier": "^2.5.1",
     "sass": "^1.49.8",
     "stylelint": "^14.5.1",
     "stylelint-config-recommended": "^7.0.0",

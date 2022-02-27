@@ -4,16 +4,16 @@ import { defineStore } from 'pinia'
 // the first argument is a unique id of the store across your application
 export const useMainStore = defineStore('main', {
   state: () => {
-      return {
-          counter: 0
-      }
+    return {
+      counter: 0
+    }
   },
   getters: {
-      count: ({counter}) => counter
+    count: ({ counter }) => counter
   },
   actions: {
-      incrementCounter(count: number) {
-          this.counter += count
-      }
+    incrementCounter(count: number) {
+      this.counter += count
+    }
   }
 })
