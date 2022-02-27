@@ -9,7 +9,7 @@
     "test": "vitest",
     "coverage": "vitest run --coverage",
     "lint": "eslint --ext .js,.vue,.ts --ignore-path .gitignore --fix src",
-    "format": "prettier src test --write"
+    "format": "prettier . --write"
   },
   "dependencies": {
     "@headlessui/vue": "^1.5.0",
