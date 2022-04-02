@@ -1,9 +1,6 @@
 import { create, NButton } from 'naive-ui'
-import { Plugin } from 'vue'
+// import { Plugin } from 'vue'
 
-export default {
-  install: () =>
-    create({
-      components: [NButton]
-    })
-} as Plugin
+export default create({
+  components: [NButton]
+})

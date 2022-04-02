@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { useMainStore } from '@/store'
-import { TButton } from '@variantjs/vue'
 import { computed } from 'vue'
 
 defineProps<{ msg: string }>()
@@ -56,14 +55,14 @@ const variant = computed(() => {
       VariantJS Docs
     </a>
   </p>
-  <TButton
-    :variant="variant"
+  <NButton
+    :type="variant"
     :disabled="variant === 'error'"
     class="capitalize mx-auto my-2"
     @click="main.incrementCounter(1)"
   >
     <b>{{ message }}</b>
-  </TButton>
+  </NButton>
   <p>
     Edit
     <code>views/HelloWorld.vue</code> to test hot module replacement.
