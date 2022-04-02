@@ -5,7 +5,7 @@ import { VueWrapper } from '@vue/test-utils'
 describe('HelloWorld.vue', () => {
   let wrapper: VueWrapper<InstanceType<typeof HelloWorld>>
   beforeEach(() => {
-    wrapper = mountComponent(HelloWorld, {
+    wrapper = mountComponent<InstanceType<typeof HelloWorld>>(HelloWorld, {
       props: { msg: 'foo bar' },
       shallow: true
     })
