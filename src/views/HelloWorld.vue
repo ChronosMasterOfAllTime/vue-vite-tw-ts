@@ -53,8 +53,11 @@ const variant = computed(() => {
     |
     <a href="https://tailwindcss.com/docs" target="_blank">Tailwind CSS Docs</a>
     |
-    <a href="https://github.com/variantjs/vue" target="_blank">
-      VariantJS Docs
+    <a
+      href="https://www.naiveui.com/en-US/dark/docs/introduction"
+      target="_blank"
+    >
+      Naive UI Docs
     </a>
   </p>
   <NButton
