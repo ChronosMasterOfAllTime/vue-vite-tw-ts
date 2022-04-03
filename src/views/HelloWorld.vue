@@ -6,6 +6,8 @@ defineProps<{ msg: string }>()
 
 const main = useMainStore()
 
+const { incrementCounter } = main
+
 const message = computed(() => {
   if (main.count >= 60) return "It's broken!"
   if (main.count > 50) return 'Uh-oh'
@@ -59,7 +61,7 @@ const variant = computed(() => {
     :type="variant"
     :disabled="variant === 'error'"
     class="capitalize mx-auto my-2"
-    @click="main.incrementCounter(1)"
+    @click="incrementCounter(1)"
   >
     <b>{{ message }}</b>
   </NButton>
