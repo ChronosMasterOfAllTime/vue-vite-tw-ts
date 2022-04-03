@@ -1,6 +1,12 @@
-import { create, NButton } from 'naive-ui'
-// import { Plugin } from 'vue'
+import {
+  create,
+  NButton,
+  NLayout,
+  NLayoutContent,
+  NLayoutSider,
+  NMenu
+} from 'naive-ui'
 
 export default create({
-  components: [NButton]
+  components: [NButton, NLayout, NLayoutContent, NLayoutSider, NMenu]
 })

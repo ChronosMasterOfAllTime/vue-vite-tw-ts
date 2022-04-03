@@ -8,12 +8,25 @@
   <div
     class="bg-white dark:bg-gray-800 dark:text-white text-gray-800 text-center h-screen w-screen"
   >
-    <img
-      class="pt-10 mx-auto mb-4"
-      alt="Chronos logo"
-      src="./assets/chronos.jpg"
-    />
-    <router-view />
+    <n-layout has-sider>
+      <n-layout-sider
+        collapse-mode="transform"
+        :collapsed-width="120"
+        :width="240"
+        show-trigger="arrow-circle"
+        bordered
+      >
+        <n-h2>Handian Bridge</n-h2>
+      </n-layout-sider>
+      <n-layout-content>
+        <img
+          class="pt-10 mx-auto mb-4"
+          alt="Chronos logo"
+          src="./assets/chronos.jpg"
+        />
+        <router-view />
+      </n-layout-content>
+    </n-layout>
   </div>
 </template>
 
