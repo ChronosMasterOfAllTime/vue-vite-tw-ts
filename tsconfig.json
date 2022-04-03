@@ -17,7 +17,7 @@
     "sourceMap": true,
     "baseUrl": ".",
     "lib": ["esnext", "dom"],
-    "types": ["vite/client", "vitest/globals"],
+    "types": ["vite/client", "vitest/globals", "naive-ui/volar"],
     "paths": {
       "@/*": ["src/*"],
       "@test/*": ["test/*"]

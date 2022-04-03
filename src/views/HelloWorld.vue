@@ -1,11 +1,12 @@
 <script setup lang="ts">
 import { useMainStore } from '@/store'
-import { TButton } from '@variantjs/vue'
 import { computed } from 'vue'
 
 defineProps<{ msg: string }>()
 
 const main = useMainStore()
+
+const { incrementCounter } = main
 
 const message = computed(() => {
   if (main.count >= 60) return "It's broken!"
@@ -52,18 +53,21 @@ const variant = computed(() => {
     |
     <a href="https://tailwindcss.com/docs" target="_blank">Tailwind CSS Docs</a>
     |
-    <a href="https://github.com/variantjs/vue" target="_blank">
-      VariantJS Docs
+    <a
+      href="https://www.naiveui.com/en-US/dark/docs/introduction"
+      target="_blank"
+    >
+      Naive UI Docs
     </a>
   </p>
-  <TButton
-    :variant="variant"
+  <NButton
+    :type="variant"
     :disabled="variant === 'error'"
     class="capitalize mx-auto my-2"
-    @click="main.incrementCounter(1)"
+    @click="incrementCounter(1)"
   >
     <b>{{ message }}</b>
-  </TButton>
+  </NButton>
   <p>
     Edit
     <code>views/HelloWorld.vue</code> to test hot module replacement.
