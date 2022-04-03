@@ -1,12 +1,12 @@
 import { mount, MountingOptions } from '@vue/test-utils'
 import { createTestingPinia } from '@pinia/testing'
-import { DefineComponent, Plugin } from 'vue'
+import { ComponentPublicInstance, Plugin } from 'vue'
 import { globalComponents } from '@/components'
 import { createPinia, setActivePinia } from 'pinia'
 
-export function mountComponent<T extends InstanceType<DefineComponent>>(
+export function mountComponent<T extends ComponentPublicInstance>(
   component: T,
-  options: MountingOptions<T> = { shallow: true },
+  options: MountingOptions<T> = { shallow: false },
   mockStore = false
 ) {
   const pinia = mockStore
@@ -25,5 +25,5 @@ export function mountComponent<T extends InstanceType<DefineComponent>>(
     }
   }
 
-  return mount(component, options)
+  return mount<T>(component, options)
 }
