@@ -2,13 +2,16 @@ import { mount, MountingOptions } from '@vue/test-utils'
 import { createTestingPinia } from '@pinia/testing'
 import { DefineComponent, Plugin } from 'vue'
 import { globalComponents } from '@/components'
-import { setActivePinia } from 'pinia'
+import { createPinia, setActivePinia } from 'pinia'
 
 export function mountComponent<T extends InstanceType<DefineComponent>>(
   component: T,
-  options: MountingOptions<T> = { shallow: true }
+  options: MountingOptions<T> = { shallow: true },
+  mockStore = false
 ) {
-  const pinia = createTestingPinia({ createSpy: vi.fn })
+  const pinia = mockStore
+    ? createTestingPinia({ createSpy: vi.fn })
+    : createPinia()
   setActivePinia(pinia)
 
   const plugins: Array<Plugin> = [pinia, globalComponents]
