@@ -19,11 +19,6 @@
         <n-h2>Handian Bridge</n-h2>
       </n-layout-sider>
       <n-layout-content>
-        <img
-          class="pt-10 mx-auto mb-4"
-          alt="Chronos logo"
-          src="./assets/chronos.jpg"
-        />
         <router-view />
       </n-layout-content>
     </n-layout>

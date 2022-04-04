@@ -1,4 +1,9 @@
 <template>
+  <img
+    class="pt-10 mx-auto mb-4"
+    alt="Chronos logo"
+    src="@/assets/chronos.jpg"
+  />
   <h1>{{ msg }}</h1>
   <p>
     Recommended IDE setup:
