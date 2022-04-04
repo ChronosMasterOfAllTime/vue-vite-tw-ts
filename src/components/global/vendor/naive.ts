@@ -14,7 +14,8 @@ import {
   NLayoutFooter,
   NLayoutHeader,
   NLayoutSider,
-  NMenu
+  NMenu,
+  NScrollbar
 } from 'naive-ui'
 
 export default create({
@@ -33,6 +34,7 @@ export default create({
     NLayoutContent,
     NLayoutFooter,
     NLayoutSider,
-    NMenu
+    NMenu,
+    NScrollbar
   ]
 })

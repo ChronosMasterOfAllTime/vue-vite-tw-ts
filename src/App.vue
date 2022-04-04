@@ -6,6 +6,8 @@ const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
 
 const mode = ref<'dark' | 'light'>(prefersDark ? 'dark' : 'light')
 const theme = computed(() => (mode.value === 'dark' ? darkTheme : lightTheme))
+
+const collapsed = ref(true)
 </script>
 
 <template>
@@ -21,14 +23,18 @@ const theme = computed(() => (mode.value === 'dark' ? darkTheme : lightTheme))
         style="top: 64px; bottom: 64px"
       >
         <n-layout-sider
+          class="fixed h-full"
           collapse-mode="transform"
           :width="240"
-          show-trigger="arrow-circle"
+          @mouseover="collapsed = false"
+          @mouseleave="collapsed = true"
+          :collapsed="collapsed"
+          :native-scrollbar="false"
           bordered
         >
           <n-h2>Layout Sider</n-h2>
         </n-layout-sider>
-        <n-layout-content>
+        <n-layout-content :native-scrollbar="false">
           <router-view />
         </n-layout-content>
       </n-layout>
