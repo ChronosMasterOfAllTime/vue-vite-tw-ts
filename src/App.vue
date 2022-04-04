@@ -1,28 +1,36 @@
 <script setup lang="ts">
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
-// another good resource: https://learnvue.co/2021/05/explaining-the-new-script-setup-type-in-vue-3-major-takeaways-from-the-rfc/
+import { darkTheme, lightTheme } from 'naive-ui'
+import { computed, ref } from 'vue'
+
+const mode = ref<'dark' | 'light'>('dark')
+const theme = computed(() => (mode.value === 'dark' ? darkTheme : lightTheme))
 </script>
 
 <template>
-  <div
-    class="bg-white dark:bg-gray-800 dark:text-white text-gray-800 text-center h-screen w-screen"
-  >
-    <n-layout has-sider>
-      <n-layout-sider
-        collapse-mode="transform"
-        :collapsed-width="120"
-        :width="240"
-        show-trigger="arrow-circle"
-        bordered
+  <n-config-provider :theme="theme">
+    <n-layout position="absolute">
+      <n-layout-header style="height: 64px; padding: 24px" bordered>
+        Yiheyuan Road
+      </n-layout-header>
+      <n-layout
+        class="bg-white dark:bg-gray-800 dark:text-white text-gray-800 text-center h-screen w-screen"
+        has-sider
+        position="absolute"
       >
-        <n-h2>Handian Bridge</n-h2>
-      </n-layout-sider>
-      <n-layout-content>
-        <router-view />
-      </n-layout-content>
+        <n-layout-sider
+          collapse-mode="transform"
+          :width="240"
+          show-trigger="arrow-circle"
+          bordered
+        >
+          <n-h2>Handian Bridge</n-h2>
+        </n-layout-sider>
+        <n-layout-content>
+          <router-view />
+        </n-layout-content>
+      </n-layout>
     </n-layout>
-  </div>
+  </n-config-provider>
 </template>
 
 <style lang="sass">
