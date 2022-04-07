@@ -1,29 +1,9 @@
-<script setup lang="ts">
-import { useMainStore } from '@/store'
-import { computed } from 'vue'
-
-defineProps<{ msg: string }>()
-
-const main = useMainStore()
-
-const { incrementCounter } = main
-
-const message = computed(() => {
-  if (main.count >= 60) return "It's broken!"
-  if (main.count > 50) return 'Uh-oh'
-  if (main.count > 30) return 'Slow Down..'
-  if (main.count > 10) return 'Great Job!'
-  return 'Click Me'
-})
-
-const variant = computed(() => {
-  if (main.count >= 60) return 'error'
-  if (main.count > 10) return 'success'
-  return 'default'
-})
-</script>
-
 <template>
+  <img
+    class="pt-10 mx-auto mb-4"
+    alt="Chronos logo"
+    src="@/assets/chronos.jpg"
+  />
   <h1>{{ msg }}</h1>
   <p>
     Recommended IDE setup:
@@ -73,6 +53,31 @@ const variant = computed(() => {
     <code>views/HelloWorld.vue</code> to test hot module replacement.
   </p>
 </template>
+
+<script setup lang="ts">
+import { useMainStore } from '@/store'
+import { computed } from 'vue'
+
+defineProps<{ msg: string }>()
+
+const main = useMainStore()
+
+const { incrementCounter } = main
+
+const message = computed(() => {
+  if (main.count >= 60) return "It's broken!"
+  if (main.count > 50) return 'Uh-oh'
+  if (main.count > 30) return 'Slow Down..'
+  if (main.count > 10) return 'Great Job!'
+  return 'Click Me'
+})
+
+const variant = computed(() => {
+  if (main.count >= 60) return 'error'
+  if (main.count > 10) return 'success'
+  return 'default'
+})
+</script>
 
 <style lang="sass" scoped>
 a

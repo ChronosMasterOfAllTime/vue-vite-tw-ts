@@ -2,13 +2,13 @@ import HelloWorld from '@/views/HelloWorld.vue'
 import { mountComponent } from '@test/unit/testhelper'
 import { VueWrapper } from '@vue/test-utils'
 import { NButton } from 'naive-ui'
+import { ComponentPublicInstance } from 'vue'
 
 describe('HelloWorld.vue', () => {
-  let wrapper: VueWrapper<InstanceType<typeof HelloWorld>>
+  let wrapper: VueWrapper<ComponentPublicInstance<typeof HelloWorld>>
   beforeEach(() => {
     wrapper = mountComponent<InstanceType<typeof HelloWorld>>(HelloWorld, {
-      props: { msg: 'foo bar' },
-      shallow: false
+      props: { msg: 'foo bar' }
     })
   })
 
