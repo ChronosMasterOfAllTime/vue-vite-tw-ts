@@ -1,11 +1,18 @@
 <script setup lang="ts">
 import { darkTheme, lightTheme } from 'naive-ui'
-import { computed, ref } from 'vue'
+import { computed, ref, watchEffect } from 'vue'
 
-const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+const darkStore = localStorage.getItem('dark')
+const prefersDark: boolean = darkStore
+  ? darkStore === 'true'
+  : window.matchMedia('(prefers-color-scheme: dark)').matches
 
-const mode = ref<'dark' | 'light'>(prefersDark ? 'dark' : 'light')
-const theme = computed(() => (mode.value === 'dark' ? darkTheme : lightTheme))
+const mode = ref<boolean>(prefersDark)
+const theme = computed(() => (mode.value ? darkTheme : lightTheme))
+
+watchEffect(() => {
+  localStorage.setItem('dark', `${mode.value}`)
+})
 
 const collapsed = ref(true)
 </script>
@@ -14,7 +21,22 @@ const collapsed = ref(true)
   <n-config-provider :theme="theme">
     <n-layout position="absolute">
       <n-layout-header style="height: 64px; padding: 24px" bordered>
-        Layout Header
+        <div class="text-right">
+          <n-switch v-model:value="mode">
+            <template #checked> Dark </template>
+            <template #unchecked> Light </template>
+            <template #checked-icon>
+              <n-icon>
+                <moon />
+              </n-icon>
+            </template>
+            <template #unchecked-icon>
+              <n-icon>
+                <sun />
+              </n-icon>
+            </template>
+          </n-switch>
+        </div>
       </n-layout-header>
       <n-layout
         class="bg-white dark:bg-gray-800 dark:text-white text-gray-800 text-center h-screen w-screen"

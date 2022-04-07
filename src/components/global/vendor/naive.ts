@@ -9,13 +9,15 @@ import {
   NH5,
   NH6,
   NHr,
+  NIcon,
   NLayout,
   NLayoutContent,
   NLayoutFooter,
   NLayoutHeader,
   NLayoutSider,
   NMenu,
-  NScrollbar
+  NScrollbar,
+  NSwitch
 } from 'naive-ui'
 
 export default create({
@@ -29,12 +31,14 @@ export default create({
     NH5,
     NH6,
     NHr,
+    NIcon,
     NLayout,
     NLayoutHeader,
     NLayoutContent,
     NLayoutFooter,
     NLayoutSider,
     NMenu,
-    NScrollbar
+    NScrollbar,
+    NSwitch
   ]
 })
