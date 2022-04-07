@@ -1,0 +1,21 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "types": ["vite/client", "vitest/globals", "naive-ui/volar", "node"],
+    "paths": {
+      "@/*": ["src/*"],
+      "@test/*": ["test/*"]
+    },
+    "baseUrl": "../.."
+  },
+  "include": [
+    "../../src/**/*.ts",
+    "../../src/**/*.d.ts",
+    "../../src/**/*.tsx",
+    "../../src/**/*.vue",
+    "**/*.ts",
+    "**/*.d.ts",
+    "**/*.tsx",
+    "**/*.vue"
+  ]
+}
