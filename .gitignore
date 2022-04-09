@@ -5,3 +5,4 @@ dist-ssr
 *.local
 coverage
 yarn-error.log
+/cypress
