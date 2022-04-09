@@ -7,6 +7,8 @@
     "build": "vue-tsc --noEmit && vite build",
     "serve": "vite preview",
     "test": "vitest",
+    "test:e2e": "cypress open-ct",
+    "test:e2e:headless": "cypress run-ct",
     "coverage": "vitest run --coverage",
     "lint": "eslint --ext .js,.vue,.ts --ignore-path .gitignore --fix src",
     "format": "prettier . --write"

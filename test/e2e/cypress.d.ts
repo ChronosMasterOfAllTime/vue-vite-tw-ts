@@ -2,6 +2,8 @@
 // load type definitions that come with Cypress module
 /// <reference types="cypress" />
 
+import { getTestElement, getTestElementByClass } from './support/commands'
+
 declare global {
   namespace Cypress {
     interface Chainable {
@@ -10,6 +12,13 @@ declare global {
        * @example cy.dataCy('greeting')
        */
       dataCy(value: string): Chainable<Element>
+      /**
+       * Custom Command - getTestElement
+       * Gets elements via the data-test-id-attribute
+       * fails if more than one of the same attribute name found
+       */
+      getTestElement: typeof getTestElement
+      getTestElementByClass: typeof getTestElementByClass
     }
   }
 }

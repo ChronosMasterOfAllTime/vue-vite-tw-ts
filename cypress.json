@@ -1,4 +1,16 @@
 {
-    "testFiles": "test/e2e/**/*.spec.js",
-    "componentFolder": "src"
+    "defaultCommandTimeout": 30000,
+    "requestTimeout": 30000,
+    "componentFolder": "test",
+    "testFiles": [
+        "e2e/**/*.{feature,features}"
+    ],
+    "pluginsFile": "test/e2e/plugins/index.ts",
+    "ignoreTestFiles": [
+        "*.{tsx?,jsx?}"
+    ],
+    "experimentalFetchPolyfill": true,
+    "trashAssetsBeforeRuns": true,
+    "viewportWidth": 1440,
+    "viewportHeight": 990
 }
