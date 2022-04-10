@@ -3,7 +3,11 @@
 /// <reference types="cypress" />
 /// <reference types="cypress-cucumber-preprocessor" />
 
-import { getTestElement, getTestElementByClass } from './support/commands'
+import {
+  dataCy,
+  getTestElement,
+  getTestElementByClass
+} from './support/commands'
 
 declare global {
   namespace Cypress {
@@ -12,7 +16,7 @@ declare global {
        * Custom command to select DOM element by data-cy attribute.
        * @example cy.dataCy('greeting')
        */
-      dataCy(value: string): Chainable<Element>
+      dataCy: typeof dataCy
       /**
        * Custom Command - getTestElement
        * Gets elements via the data-test-id-attribute

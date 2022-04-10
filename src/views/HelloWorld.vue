@@ -41,6 +41,7 @@
     </a>
   </p>
   <NButton
+    data-cy="click-me"
     :type="variant"
     :disabled="variant === 'error'"
     class="capitalize mx-auto my-2"

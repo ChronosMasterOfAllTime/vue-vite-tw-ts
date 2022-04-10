@@ -5,5 +5,5 @@ Then('I see {string} in the title', (val: string) => {
 })
 
 Cypress.on('uncaught:exception', (err, _runnable) => {
-  console.log(err)
+  console.error(err)
 })
