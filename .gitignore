@@ -6,3 +6,4 @@ dist-ssr
 coverage
 yarn-error.log
 /cypress
+/.nyc_output
