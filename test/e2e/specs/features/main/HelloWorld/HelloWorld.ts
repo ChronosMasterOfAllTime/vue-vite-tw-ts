@@ -1,11 +1,3 @@
-Given('I open the home page', () => {
-  cy.visit(Cypress.env('BASE_URL'))
-})
-
-Given('I can see the {string} button', (attr: string) => {
-  cy.dataCy(attr)
-})
-
 When(
   'I click on the {string} button {int} times',
   (attr: string, times: number) => {
@@ -24,5 +16,14 @@ Then(
 
     el.should('have.text', message)
     el.should('be.disabled')
+  }
+)
+
+Then(
+  'The {string} switch should say {string}',
+  (attr: string, message: string) => {
+    const el = cy.dataCy(attr)
+
+    el.should('include.text', message)
   }
 )
