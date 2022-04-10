@@ -8,7 +8,7 @@
     "serve": "vite preview",
     "test": "vitest",
     "test:e2e": "concurrently -r 'yarn dev' 'cypress open'",
-    "test:e2e:headless": "concurrently -r 'yarn dev' 'cypress run'",
+    "test:e2e:headless": "concurrently -k -r -s first 'yarn dev' 'cypress run'",
     "coverage": "vitest run --coverage",
     "lint": "eslint --ext .js,.vue,.ts --ignore-path .gitignore --fix src",
     "format": "prettier . --write"
