@@ -1,0 +1,25 @@
+{
+    "defaultCommandTimeout": 30000,
+    "requestTimeout": 30000,
+    "componentFolder": "test",
+    "testFiles": [
+        "**/*.{feature,features}"
+    ],
+    "fileServerFolder": ".",
+    "integrationFolder": "test/e2e/specs",
+    "fixturesFolder": "test/e2e/fixtures",
+    "pluginsFile": "test/e2e/plugins/index.ts",
+    "supportFile": "test/e2e/support/index.ts",
+    "ignoreTestFiles": [
+        "*.{ts,tsx,js,jsx}"
+    ],
+    "experimentalFetchPolyfill": true,
+    "trashAssetsBeforeRuns": true,
+    "viewportWidth": 1440,
+    "viewportHeight": 990,
+    "env": {
+        "CYPRESS_COVERAGE": "true",
+        "TAGS": "not @ignore",
+        "BASE_URL": "localhost:3000"
+    }
+}

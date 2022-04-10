@@ -9,6 +9,10 @@ export default defineConfig({
   plugins,
   test: {
     environment: 'happy-dom',
-    globals: true
+    globals: true,
+    coverage: {
+      all: true,
+      exclude: ['*.config.{ts,js}', '**/*.d.ts', 'src/main.ts', 'dist', 'test']
+    }
   }
 })
