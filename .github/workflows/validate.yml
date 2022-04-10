@@ -21,5 +21,7 @@ jobs:
         run: yarn lint
       - name: run tests
         run: yarn coverage
+      - name: run e2e
+        run: yarn test:e2e:headless
       - name: run build
         run: yarn build
