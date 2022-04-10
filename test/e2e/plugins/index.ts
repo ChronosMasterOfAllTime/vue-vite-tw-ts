@@ -11,13 +11,13 @@ const cucumber = require('cypress-cucumber-preprocessor').default
 const rootDir = path.resolve(__dirname, '..', '..', '..')
 
 module.exports = (on, config) => {
-  const options = {
+  const cucumberOptions = {
     ...browserify.defaultOptions,
     typescript: path.join(rootDir, 'node_modules/typescript')
   }
 
   coverage(on, config)
-  on('file:preprocessor', cucumber(options))
+  on('file:preprocessor', cucumber(cucumberOptions))
   on('dev-server:start', (options: Cypress.DevServerConfig) => {
     return startDevServer({
       options,

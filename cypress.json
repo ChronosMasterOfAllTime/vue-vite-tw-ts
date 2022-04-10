@@ -19,6 +19,7 @@
     "viewportHeight": 990,
     "env": {
         "CYPRESS_COVERAGE": "true",
-        "TAGS": "not @ignore"
+        "TAGS": "not @ignore",
+        "BASE_URL": "localhost:3000"
     }
 }

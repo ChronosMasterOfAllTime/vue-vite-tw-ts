@@ -8,5 +8,9 @@ Feature: HelloWorld
         Then I see "Vite App" in the title
 
     @ignore
-    Scenario: Clicking on the button
+    Scenario: This Test should be skipped
+
+    Scenario: Clicking on the button enough times should break it
         Given I can see the "click-me" button
+        When I click on the "click-me" button 60 times
+        Then The "click-me" button should say "It's Broken!" and be disabled

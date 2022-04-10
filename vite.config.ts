@@ -5,10 +5,8 @@ import IstanbulPlugin from 'vite-plugin-istanbul'
 
 const plugins: Array<Plugin> = [vue(), tsconfigPaths()]
 
-console.log('instrumenting for E2E coverage')
 plugins.push(
   IstanbulPlugin({
-    requireEnv: true,
     cypress: true,
     checkProd: true,
     exclude: ['dist', '.nyc_output', 'node_modules', 'coverage', 'test'],
@@ -18,5 +16,8 @@ plugins.push(
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins
+  plugins,
+  build: {
+    sourcemap: process.env.NODE_ENV === 'production' ? false : 'inline'
+  }
 })
