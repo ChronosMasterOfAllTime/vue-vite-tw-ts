@@ -1245,6 +1245,11 @@
   dependencies:
     "@types/node" "*"
 
+"@types/cypress-cucumber-preprocessor@^4.0.1":
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/@types/cypress-cucumber-preprocessor/-/cypress-cucumber-preprocessor-4.0.1.tgz#1e4cb1c3cf6c9c2c37bc523b5d5047a515cd4e93"
+  integrity sha512-sK2/uU5CtmJ51zo0JF2Lc4iSw9Fy3xn9ewfewuooV5Qmeb5O+brAHuoXKMV7UWwRbBmd+txhAXAJoi4S5QLDRQ==
+
 "@types/cypress@^1.1.3":
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/@types/cypress/-/cypress-1.1.3.tgz#0a700c040d53e9e12b5af98e41d4a88c39f39b6a"
@@ -4549,7 +4554,7 @@ istanbul-lib-hook@^3.0.0:
   dependencies:
     append-transform "^2.0.0"
 
-istanbul-lib-instrument@^4.0.0:
+istanbul-lib-instrument@^4.0.0, istanbul-lib-instrument@^4.0.3:
   version "4.0.3"
   resolved "https://registry.yarnpkg.com/istanbul-lib-instrument/-/istanbul-lib-instrument-4.0.3.tgz#873c6fff897450118222774696a3f28902d77c1d"
   integrity sha512-BXgQl9kf4WTCPCCpmFGoJkz/+uhvm7h7PFKUYxh7qarQd3ER33vHG//qaE8eN25l07YqZPpHXU9I09l/RD5aGQ==
@@ -7120,6 +7125,15 @@ vfonts@^0.0.3:
   version "0.0.3"
   resolved "https://registry.yarnpkg.com/vfonts/-/vfonts-0.0.3.tgz#999d66fecea18efee3f2b966c81101ae8ce01a29"
   integrity sha512-nguyw8L6Un8eelg1vQ31vIU2ESxqid7EYmy8V+MDeMaHBqaRSkg3dTBToC1PR00D89UzS/SLkfYPnx0Wf23IQQ==
+
+vite-plugin-istanbul@^2.5.1:
+  version "2.5.1"
+  resolved "https://registry.yarnpkg.com/vite-plugin-istanbul/-/vite-plugin-istanbul-2.5.1.tgz#03100d70da69374343ab79676e5f8ceb233fb330"
+  integrity sha512-5ZR2/haQalUXVqHrjatZ0QKxzF3e0hBiJe6VhjGYxE7Yc4WFs7ZE56oazYB4jnPXvlirOvgLxG0LJQoHFdMxMg==
+  dependencies:
+    chalk "^4.1.2"
+    istanbul-lib-instrument "^4.0.3"
+    test-exclude "^6.0.0"
 
 vite-tsconfig-paths@^3.4.1:
   version "3.4.1"

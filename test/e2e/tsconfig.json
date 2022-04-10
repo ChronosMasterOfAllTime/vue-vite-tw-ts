@@ -1,9 +1,16 @@
 {
+  // "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "target": "es5",
-    "lib": ["es5", "dom"],
-    "types": ["cypress", "node"],
-    "esModuleInterop": true
+    "target": "esnext",
+    "lib": ["esnext", "dom"],
+    "types": ["cypress", "cypress-cucumber-preprocessor", "node"],
+    "esModuleInterop": true,
+    "noImplicitAny": false,
+    "importHelpers": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node"
+    // "baseUrl": "."
   },
-  "include": ["**/*.ts", "**/*.d.ts"]
+  "include": ["**/*.ts", "**/*.d.ts", "node_modules/cypress"]
 }
