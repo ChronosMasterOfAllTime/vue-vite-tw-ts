@@ -1,3 +1,12 @@
 {
-  "recommendations": ["johnsoncodehk.volar"]
+  "recommendations": [
+    "johnsoncodehk.volar",
+    "zixuanchen.vitest-explorer",
+    "bradlc.vscode-tailwindcss",
+    "foxundermoon.shell-format",
+    "syler.sass-indented",
+    "esbenp.prettier-vscode",
+    "alexkrechik.cucumberautocomplete",
+    "dbaeumer.vscode-eslint"
+  ]
 }
