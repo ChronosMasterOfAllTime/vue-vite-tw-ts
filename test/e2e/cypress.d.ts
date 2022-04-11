@@ -1,7 +1,7 @@
 // in cypress/support/index.ts
 // load type definitions that come with Cypress module
 /// <reference types="cypress" />
-/// <reference types="cypress-cucumber-preprocessor" />
+/// <reference types="cypress-cucumber-preprocessor/steps" />
 
 import {
   dataCy,

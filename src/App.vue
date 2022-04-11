@@ -1,5 +1,5 @@
 <template>
-  <n-config-provider :theme="theme">
+  <n-config-provider data-cy="app" :theme="theme" :class="{ dark: mode }">
     <n-layout position="absolute">
       <n-layout-header style="height: 64px; padding: 24px" bordered>
         <div class="text-right">
@@ -26,6 +26,7 @@
         style="top: 64px; bottom: 64px"
       >
         <n-layout-sider
+          data-cy="sidebar"
           class="fixed h-full"
           collapse-mode="transform"
           :width="240"

@@ -6,7 +6,7 @@ const globalPlugins = [...vendorPlugins]
 export const globalComponents = {
   install(app: App) {
     for (const { install } of globalPlugins) {
-      if (install) install(app)
+      install?.(app)
     }
   }
 } as Plugin
