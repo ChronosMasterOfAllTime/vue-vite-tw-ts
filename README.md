@@ -27,9 +27,11 @@ Since TypeScript cannot handle type information for `.vue` imports, they are shi
 - `yarn serve`
   - Serves up the static content generated via `yarn build`
 - `yarn test`
+  - Runs all unit tests in `test/unit` (uses **vitest**)
+- `yarn test:watch`
   - Runs all unit tests in `test/unit` with watch mode enabled (uses **vitest**)
 - `yarn coverage`
-  - Runs all unit tests in `test/unit` with coverage reports
+  - Runs all unit tests in `test/unit` with coverage reports (uses **vitest**)
 - `yarn test:e2e`
   - Starts a local dev server and starts the Cypress interactive test runner
 - `yarn test:e2e:headless`
