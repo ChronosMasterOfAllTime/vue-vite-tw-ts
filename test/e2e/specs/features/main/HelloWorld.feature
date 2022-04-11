@@ -19,3 +19,21 @@ Feature: HelloWorld
         Given I can see the "dark-mode" element
         When I click on the "dark-mode" element
         Then The "dark-mode" switch should say "Dark"
+        Then The "app" element should have class "dark"
+        Given I refresh the page
+        Then The "app" element should have class "dark"
+
+    Scenario: Switching Light Mode
+        Given I can see the "dark-mode" element
+        When I click on the "dark-mode" element
+        Then The "dark-mode" switch should say "Light"
+        Then The "app" element should not have class "dark"
+        Given I refresh the page
+        Then The "app" element should not have class "dark"
+
+    Scenario: Mouseover/leave the sidebar
+        Given I can see the "sidebar" element
+        When I trigger the "mouseover" event on the "sidebar" element
+        Then The "max-width" style on the "sidebar" element should be "240px"
+        When I trigger the "mouseleave" event on the "sidebar" element
+        Then The "max-width" style on the "sidebar" element should be "48px"
