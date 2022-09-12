@@ -1,7 +1,16 @@
 const { Given, When, Then } = require('cypress-cucumber-preprocessor/steps')
 
 Given('I open the home page', () => {
-  cy.visit(Cypress.env('BASE_URL'))
+  cy.visit(Cypress.env('BASE_URL'), {
+    onBeforeLoad(win) {
+      cy.stub(win, 'matchMedia')
+        .withArgs('(prefers-color-scheme: dark)')
+        .returns({
+          matches: false,
+          addListener() {}
+        })
+    }
+  })
 })
 
 Given('I refresh the page', () => {
