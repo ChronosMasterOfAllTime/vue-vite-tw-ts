@@ -19,5 +19,8 @@ export default defineConfig({
   plugins,
   build: {
     sourcemap: process.env.NODE_ENV === 'production' ? false : 'inline'
+  },
+  server: {
+    port: 3000
   }
 })
