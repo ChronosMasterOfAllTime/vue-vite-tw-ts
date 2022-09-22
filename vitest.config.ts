@@ -25,7 +25,10 @@ export default mergeConfig(
           'src/main.ts',
           'dist',
           'test'
-        ]
+        ],
+        functions: 80,
+        branches: 80,
+        statements: 80
       }
     }
   })
