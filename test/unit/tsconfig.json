@@ -13,6 +13,8 @@
     "../../src/**/*.d.ts",
     "../../src/**/*.tsx",
     "../../src/**/*.vue",
+    "../../tests/unit/**.ts",
+    "../../tests/unit/**.spec.ts",
     "**/*.ts",
     "**/*.d.ts",
     "**/*.tsx",
