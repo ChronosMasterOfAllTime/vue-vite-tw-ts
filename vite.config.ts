@@ -5,19 +5,25 @@ import IstanbulPlugin from 'vite-plugin-istanbul'
 
 const plugins: Array<Plugin> = [vue(), tsconfigPaths()]
 
-plugins.push(
-  IstanbulPlugin({
-    cypress: true,
-    checkProd: true,
-    exclude: ['dist', '.nyc_output', 'node_modules', 'coverage', 'test'],
-    include: ['src/*']
-  })
-)
+if (process.env.CYPRESS_TEST === 'true') {
+  console.info('instrumenting code coverage for e2e tests...')
+  plugins.push(
+    IstanbulPlugin({
+      cypress: true,
+      checkProd: true,
+      exclude: ['dist', '.nyc_output', 'node_modules', 'coverage', 'test'],
+      include: ['src/*']
+    })
+  )
+}
 
 // https://vitejs.dev/config/
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
   plugins,
   build: {
-    sourcemap: process.env.NODE_ENV === 'production' ? false : 'inline'
+    sourcemap: mode === 'production' ? false : 'inline'
+  },
+  server: {
+    port: 3000
   }
-})
+}))
