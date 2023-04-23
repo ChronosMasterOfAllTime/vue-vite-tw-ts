@@ -1,16 +1,14 @@
 {
-  // "extends": "../../tsconfig.json",
   "compilerOptions": {
     "target": "esnext",
     "lib": ["esnext", "dom"],
-    "types": ["cypress", "cypress-cucumber-preprocessor", "node"],
+    "types": ["cypress", "node"],
     "esModuleInterop": true,
     "noImplicitAny": false,
     "importHelpers": true,
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
     "moduleResolution": "node"
-    // "baseUrl": "."
   },
   "include": ["**/*.ts", "**/*.d.ts", "node_modules/cypress"]
 }

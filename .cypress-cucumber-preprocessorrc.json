@@ -1,0 +1,10 @@
+{
+    "stepDefinitions": [
+        "test/e2e/specs/features/**/*.{js,ts}",
+        "test/e2e/specs/common/**/*.{js,ts}"
+    ],
+    "json": {
+        "enabled": true,
+        "output": "test/e2e/reports/cucumber-json/chronos-e2e.cucumber.json"
+    }
+}

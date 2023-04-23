@@ -1,4 +1,4 @@
-const { Given, When, Then } = require('cypress-cucumber-preprocessor/steps')
+import { Given, When, Then } from '@badeball/cypress-cucumber-preprocessor'
 
 Given('I open the home page', () => {
   cy.visit(Cypress.env('BASE_URL'), {
@@ -66,6 +66,12 @@ Then(
     el.should('not.have.class', val)
   }
 )
+
+Then('I should see the {string} element', (attr: string) => {
+  const el = cy.dataCy(attr)
+
+  el.should('be.visible')
+})
 
 Cypress.on('uncaught:exception', (err, _runnable) => {
   console.error(err)
