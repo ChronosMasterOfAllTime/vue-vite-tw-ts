@@ -4,7 +4,7 @@ import vue from '@vitejs/plugin-vue'
 import tsconfigPaths from 'vite-tsconfig-paths'
 import config from './vite.config'
 
-const plugins = [vue(), tsconfigPaths({ root: 'test/unit' })]
+const plugins = [vue(), tsconfigPaths()]
 
 // https://vitejs.dev/config/
 export default mergeConfig(
