@@ -2,6 +2,7 @@
   <img
     class="pt-10 mx-auto mb-4"
     alt="Chronos logo"
+    data-cy="chronos-logo"
     src="@/assets/chronos.jpg"
   />
   <h1>{{ msg }}</h1>

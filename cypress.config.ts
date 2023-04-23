@@ -1,7 +1,8 @@
 import { defineConfig } from 'cypress'
 import { devServer } from '@cypress/vite-dev-server'
 import { ViteDevServerConfig } from '@cypress/vite-dev-server/dist/devServer'
-import plugin from './test/e2e/plugins'
+import { setupNodeEvents } from './test/e2e/plugins'
+import viteConfig from './vite.config'
 
 export default defineConfig({
   defaultCommandTimeout: 30000,
@@ -15,14 +16,13 @@ export default defineConfig({
   env: {
     CYPRESS_COVERAGE: 'true',
     TAGS: 'not @ignore',
-    BASE_URL: 'localhost:3000'
+    BASE_URL: 'http://localhost:3000'
   },
   e2e: {
+    baseUrl: 'http://localhost:3000',
     // We've imported your old cypress plugins here.
     // You may want to clean this up later by importing these.
-    setupNodeEvents(on, config) {
-      return plugin(on, config)
-    },
+    setupNodeEvents,
     specPattern: 'test/e2e/specs/**/*.{feature,features}',
     supportFile: 'test/e2e/support/index.ts',
     excludeSpecPattern: ['*.{ts,tsx,js,jsx}']
@@ -32,7 +32,11 @@ export default defineConfig({
       return devServer({
         ...config,
         framework: 'vue',
-        viteConfig: './vite.config.ts'
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        //@ts-ignore
+        viteConfig: {
+          ...viteConfig
+        }
       })
     },
     specPattern: 'test/**/*.{feature,features}',

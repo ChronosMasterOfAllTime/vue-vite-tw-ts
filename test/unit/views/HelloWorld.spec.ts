@@ -25,13 +25,13 @@ describe('HelloWorld.vue', () => {
       wrapper.findComponent(NButton)
 
     expect(nButton.exists()).toBe(true)
-    expect(nButton.attributes().disabled).toBe('false')
+    expect(nButton.attributes()).not.toHaveProperty('disabled')
 
     for (let i = 0; i < 61; i++) {
       ;(nButton.element as HTMLButtonElement).click()
       await wrapper.vm.$nextTick()
     }
 
-    expect(nButton.attributes().disabled).toBe('true')
+    expect(nButton.attributes()).toHaveProperty('disabled')
   })
 })

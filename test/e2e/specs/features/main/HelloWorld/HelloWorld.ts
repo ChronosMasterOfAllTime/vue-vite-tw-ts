@@ -1,3 +1,5 @@
+import { Given, When, Then } from '@badeball/cypress-cucumber-preprocessor'
+
 When(
   'I click on the {string} button {int} times',
   (attr: string, times: number) => {
