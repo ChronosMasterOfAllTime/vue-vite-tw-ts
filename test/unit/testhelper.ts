@@ -1,13 +1,13 @@
 import { globalComponents } from '@/components'
 import router from '@/router'
-import { mount, MountingOptions } from '@vue/test-utils'
+import { ComponentMountingOptions, mount } from '@vue/test-utils'
 import { createTestingPinia, TestingOptions } from '@pinia/testing'
 import { ComponentPublicInstance, Plugin } from 'vue'
 import { createPinia, setActivePinia } from 'pinia'
 
 export function mountComponent<T extends ComponentPublicInstance>(
   component: T,
-  options: MountingOptions<T> = { shallow: false },
+  options: ComponentMountingOptions<T> = { shallow: false },
   mockStore?: TestingOptions,
   useRouter = false
 ) {
@@ -31,5 +31,5 @@ export function mountComponent<T extends ComponentPublicInstance>(
     }
   }
 
-  return mount<T>(component, options)
+  return mount(component, options)
 }
