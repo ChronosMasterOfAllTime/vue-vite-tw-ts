@@ -19,12 +19,12 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: install dependencies
-        run: yarn
+        run: npm i
       - name: run linter checks
-        run: yarn lint
+        run: npm run lint
       - name: run tests
-        run: yarn coverage
+        run: npm run coverage
       - name: run e2e
-        run: yarn test:e2e:headless
+        run: npm run test:e2e:headless
       - name: run build
-        run: yarn build
+        run: npm run build

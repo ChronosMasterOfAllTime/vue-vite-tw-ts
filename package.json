@@ -4,14 +4,14 @@
   "license": "MIT",
   "scripts": {
     "dev": "vite",
-    "build": "yarn validate:types && vite build",
+    "build": "npm run validate:types && vite build",
     "validate:types": "vue-tsc --noEmit",
     "serve": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest",
-    "test:e2e:wsl": "env LIBGL_ALWAYS_INDIRECT=1 DISPLAY=:0 yarn test:e2e",
-    "test:e2e": "env CYPRESS_TEST=true concurrently -r \"yarn dev\" \"cypress open\"",
-    "test:e2e:headless": "env CYPRESS_TEST=true concurrently -k -r -s first \"yarn dev\" \"cypress run\"",
+    "test:e2e:wsl": "env LIBGL_ALWAYS_INDIRECT=1 DISPLAY=:0 npm run test:e2e",
+    "test:e2e": "env CYPRESS_TEST=true concurrently -r \"npm run dev\" \"cypress open\"",
+    "test:e2e:headless": "env CYPRESS_TEST=true concurrently -k -r -s first \"npm run dev\" \"cypress run\"",
     "coverage": "vitest run --coverage",
     "lint": "eslint --ext .js,.vue,.ts --ignore-path .gitignore --fix src",
     "format": "prettier . --write"

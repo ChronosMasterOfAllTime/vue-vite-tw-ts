@@ -15,28 +15,27 @@ Since TypeScript cannot handle type information for `.vue` imports, they are shi
 ## Getting started
 
 - Install [node LTS](https://nodejs.org/en/download/)
-- Install [yarn](https://yarnpkg.com/getting-started/install)
-- run `yarn` in the root dir to install all dependencies
+- run `npm i` in the root dir to install all dependencies
 
 ## Commands
 
-- `yarn dev`
+- `npm run dev`
   - Starts the local dev Vite server
-- `yarn build`
+- `npm run build`
   - Generates a production build for deployment
-- `yarn serve`
-  - Serves up the static content generated via `yarn build`
-- `yarn test`
+- `npm run serve`
+  - Serves up the static content generated via `npm run build`
+- `npm run test`
   - Runs all unit tests in `test/unit` (uses **vitest**)
-- `yarn test:watch`
+- `npm run test:watch`
   - Runs all unit tests in `test/unit` with watch mode enabled (uses **vitest**)
-- `yarn coverage`
+- `npm run coverage`
   - Runs all unit tests in `test/unit` with coverage reports (uses **vitest**)
-- `yarn test:e2e`
+- `npm run test:e2e`
   - Starts a local dev server and starts the Cypress interactive test runner
-- `yarn test:e2e:headless`
+- `npm run test:e2e:headless`
   - Starts a local dev server and starts the Cypress headless test runner
-- `yarn lint`
+- `npm run lint`
   - Run linter checks (configurable via `.eslintrc`)
-- `yarn format`
+- `npm run format`
   - Run Prettier formatting for all files
