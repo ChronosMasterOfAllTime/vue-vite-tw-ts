@@ -37,7 +37,7 @@
     "@cypress/vue": "^5.0.5",
     "@pinia/testing": "^0.0.16",
     "@tailwindcss/aspect-ratio": "^0.4.2",
-    "@tailwindcss/forms": "^0.5.3",
+    "@tailwindcss/forms": "^0.5.6",
     "@tailwindcss/typography": "^0.5.9",
     "@types/node": "^20.8.0",
     "@typescript-eslint/eslint-plugin": "^5.59.0",
