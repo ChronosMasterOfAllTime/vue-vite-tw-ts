@@ -4,6 +4,7 @@ Given('I open the home page', () => {
   cy.visit(Cypress.env('BASE_URL'), {
     onBeforeLoad(win) {
       cy.stub(win, 'matchMedia')
+        .callThrough()
         .withArgs('(prefers-color-scheme: dark)')
         .returns({
           matches: false,
