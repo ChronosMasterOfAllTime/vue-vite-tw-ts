@@ -23,8 +23,10 @@ if (process.env.CYPRESS_TEST === 'true') {
 export default defineConfig(({ mode }) => ({
   plugins,
   test: {
-    deps: {
-      inline: ['date-fns']
+    server: {
+      deps: {
+        inline: ['date-fns']
+      }
     },
     environment: 'happy-dom',
     globals: true,
