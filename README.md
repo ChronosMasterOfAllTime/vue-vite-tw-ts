@@ -15,6 +15,7 @@ Since TypeScript cannot handle type information for `.vue` imports, they are shi
 ## Getting started
 
 - Install [node LTS](https://nodejs.org/en/download/)
+  - Currently 18.x (deprecated) and 20.x (current) are supported
 - run `npm i` in the root dir to install all dependencies
 
 ## Commands
