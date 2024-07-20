@@ -44,8 +44,8 @@
     "@typescript-eslint/parser": "^7.7.0",
     "@vicons/fa": "^0.12.0",
     "@vitejs/plugin-vue": "^5.0.4",
-    "@vitest/coverage-v8": "^1.5.0",
-    "@vitest/ui": "^1.5.0",
+    "@vitest/coverage-v8": "^1.6.0",
+    "@vitest/ui": "^1.6.0",
     "@vue/compiler-dom": "^3.4.23",
     "@vue/compiler-sfc": "^3.4.23",
     "@vue/server-renderer": "^3.4.33",
@@ -74,7 +74,7 @@
     "vite": "^5.2.10",
     "vite-plugin-istanbul": "^6.0.0",
     "vite-tsconfig-paths": "^4.3.2",
-    "vitest": "^1.5.0",
+    "vitest": "^1.6.0",
     "vue-tsc": "^2.0.26",
     "webpack": "^5.91.0"
   }
