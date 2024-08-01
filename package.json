@@ -32,7 +32,7 @@
     "@badeball/cypress-cucumber-preprocessor": "^20.0.3",
     "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
     "@cypress/browserify-preprocessor": "^3.0.2",
-    "@cypress/code-coverage": "^3.12.35",
+    "@cypress/code-coverage": "^3.12.44",
     "@cypress/vite-dev-server": "^5.0.7",
     "@cypress/vue": "^6.0.0",
     "@pinia/testing": "^0.1.3",
