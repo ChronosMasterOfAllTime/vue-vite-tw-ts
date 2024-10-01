@@ -60,7 +60,7 @@
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-vue": "^9.25.0",
     "happy-dom": "^14.7.1",
-    "naive-ui": "^2.38.1",
+    "naive-ui": "^2.40.1",
     "postcss": "^8.4.38",
     "postcss-import": "^16.1.0",
     "postcss-scss": "^4.0.9",
