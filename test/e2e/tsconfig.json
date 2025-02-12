@@ -13,7 +13,7 @@
     ], // don't forget node here
     "esModuleInterop": true,
     "typeRoots": [
-      "node_modules/@types"
+      "../../node_modules/@types"
     ],
     "noImplicitAny": false,
     "allowJs": true,
