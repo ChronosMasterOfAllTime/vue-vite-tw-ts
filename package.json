@@ -65,6 +65,7 @@
     "naive-ui": "^2.41.0",
     "postcss": "^8.5.2",
     "postcss-import": "^16.1.0",
+    "postcss-nested": "^7.0.2",
     "postcss-scss": "^4.0.9",
     "prettier": "^3.5.0",
     "sass": "^1.84.0",
