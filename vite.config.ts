@@ -1,11 +1,12 @@
 /// <reference types="vitest" />
 
 import { defineConfig, Plugin } from 'vite'
-import vue from '@vitejs/plugin-vue'
-import tsconfigPaths from 'vite-tsconfig-paths'
 import IstanbulPlugin from 'vite-plugin-istanbul'
+import tailwindcss from '@tailwindcss/vite'
+import tsconfigPaths from 'vite-tsconfig-paths'
+import vue from '@vitejs/plugin-vue'
 
-const plugins: Array<Plugin> = [vue(), tsconfigPaths()]
+const plugins: Array<Plugin> = [vue(), tsconfigPaths(), tailwindcss()]
 
 if (process.env.CYPRESS_TEST === 'true') {
   console.info('instrumenting code coverage for e2e tests...')
