@@ -6,7 +6,7 @@ import tailwindcss from '@tailwindcss/vite'
 import tsconfigPaths from 'vite-tsconfig-paths'
 import vue from '@vitejs/plugin-vue'
 
-const plugins: Array<Plugin> = [vue(), tsconfigPaths(), tailwindcss()]
+const plugins: Array<Plugin> = [vue(), tsconfigPaths(), ...tailwindcss()]
 
 if (process.env.CYPRESS_TEST === 'true') {
   console.info('instrumenting code coverage for e2e tests...')
