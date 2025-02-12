@@ -21,6 +21,7 @@
     "@headlessui/vue": "^1.7.23",
     "@heroicons/vue": "^2.2.0",
     "@popperjs/core": "^2.11.8",
+    "@tailwindcss/postcss": "^4.0.6",
     "body-scroll-lock": "^4.0.0-beta.0",
     "globals": "^15.15.0",
     "pinia": "^3.0.0",
