@@ -3,7 +3,7 @@
     <n-layout position="absolute">
       <n-layout-header style="height: 64px; padding: 24px" bordered>
         <div class="text-right">
-          <n-switch data-cy="dark-mode" v-model:value="mode">
+          <n-switch v-model:value="mode" data-cy="dark-mode">
             <template #checked> Dark </template>
             <template #unchecked> Light </template>
             <template #checked-icon>
@@ -30,11 +30,11 @@
           class="fixed h-full"
           collapse-mode="transform"
           :width="240"
-          @mouseover="collapsed = false"
-          @mouseleave="collapsed = true"
           :collapsed="collapsed"
           :native-scrollbar="false"
           bordered
+          @mouseover="collapsed = false"
+          @mouseleave="collapsed = true"
         >
           <n-h2>Layout Sider</n-h2>
         </n-layout-sider>

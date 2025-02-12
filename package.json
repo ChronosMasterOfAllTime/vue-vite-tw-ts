@@ -14,7 +14,7 @@
     "test:e2e": "env CYPRESS_TEST=true concurrently -r \"npm run dev\" \"cypress open\"",
     "test:e2e:headless": "env CYPRESS_TEST=true concurrently -k -r -s first \"npm run dev\" \"cypress run\"",
     "coverage": "npm run test -- --coverage",
-    "lint": "eslint --ext .js,.vue,.ts --ignore-path .gitignore --fix src",
+    "lint": "eslint --fix src",
     "format": "prettier . --write"
   },
   "dependencies": {
@@ -23,6 +23,7 @@
     "@popperjs/core": "^2.11.8",
     "@tailwindcss/postcss": "^4.0.6",
     "body-scroll-lock": "^4.0.0-beta.0",
+    "globals": "^15.15.0",
     "pinia": "^3.0.0",
     "vue": "^3.4.23",
     "vue-router": "^4.5.0"
@@ -37,6 +38,7 @@
     "@cypress/code-coverage": "^3.13.11",
     "@cypress/vite-dev-server": "^6.0.2",
     "@cypress/vue": "^6.0.2",
+    "@eslint/js": "^9.20.0",
     "@pinia/testing": "^1.0.0",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/forms": "^0.5.10",
@@ -73,6 +75,7 @@
     "stylelint-config-recommended": "^15.0.0",
     "tailwindcss": "^4.0.6",
     "typescript": "^5.7.3",
+    "typescript-eslint": "^8.24.0",
     "vfonts": "^0.0.3",
     "vite": "^6.1.0",
     "vite-plugin-istanbul": "^6.0.2",
