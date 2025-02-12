@@ -9,7 +9,6 @@ export default defineConfig({
   requestTimeout: 30000,
   fileServerFolder: '.',
   fixturesFolder: 'test/e2e/fixtures',
-  experimentalFetchPolyfill: true,
   trashAssetsBeforeRuns: true,
   viewportWidth: 1440,
   viewportHeight: 990,

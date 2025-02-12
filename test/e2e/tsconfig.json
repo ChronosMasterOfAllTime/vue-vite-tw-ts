@@ -1,14 +1,42 @@
 {
   "compilerOptions": {
+    "strict": true,
+    "module": "esnext",
     "target": "esnext",
-    "lib": ["esnext", "dom"],
-    "types": ["cypress", "node"],
+    "lib": [
+      "esnext",
+      "dom"
+    ],
+    "types": [
+      "cypress",
+      "node"
+    ], // don't forget node here
     "esModuleInterop": true,
+    "typeRoots": [
+      "node_modules/@types"
+    ],
     "noImplicitAny": false,
-    "importHelpers": true,
-    "experimentalDecorators": true,
-    "allowSyntheticDefaultImports": true,
+    "allowJs": true,
+    "sourceMap": true,
+    "baseUrl": "../..",
+    "paths": {
+      "@e2e/*": [
+        "test/e2e/*"
+      ],
+      "@badeball/cypress-cucumber-preprocessor/*": [
+        "./node_modules/@badeball/cypress-cucumber-preprocessor/dist/subpath-entrypoints/*"
+      ],
+      "@/*": [
+        "src/*"
+      ],
+    },
     "moduleResolution": "node"
   },
-  "include": ["**/*.ts", "**/*.d.ts", "node_modules/cypress"]
+  "include": [
+    "./**/*.ts",
+    "../../node_modules/cypress"
+  ],
+  "exclude": [
+    "../../node_modules"
+  ]
 }
