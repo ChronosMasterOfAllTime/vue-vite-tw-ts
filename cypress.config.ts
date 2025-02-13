@@ -1,10 +1,10 @@
 import { defineConfig } from 'cypress'
 import { devServer } from '@cypress/vite-dev-server'
-// import { ViteDevServerConfig } from '@cypress/vite-dev-server/dist/devServer'
+import { ViteDevServerConfig } from '@cypress/vite-dev-server/dist/devServer'
 import { setupNodeEvents } from './test/e2e/plugins'
 import viteConfig from './vite.config'
 
-export default defineConfig({
+export default defineConfig<ViteDevServerConfig>({
   defaultCommandTimeout: 30000,
   requestTimeout: 30000,
   fileServerFolder: '.',
