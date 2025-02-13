@@ -45,6 +45,6 @@ jobs:
         run: npm run test:e2e:setup
       - name: run e2e
         if: matrix.os != 'windows-latest'
-        run: env DEBUG=cypress:* npm run test:e2e:headless
+        run: npm run test:e2e:headless
       - name: run build
         run: npm run build
