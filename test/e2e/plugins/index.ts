@@ -1,6 +1,9 @@
 // in cypress/support/index.ts
 // load type definitions that come with Cypress module
 import path from 'path'
+
+const __dirname = import.meta.dirname
+
 const rootDir = path.resolve(__dirname, '..', '..', '..')
 
 import { devServer } from '@cypress/vite-dev-server'
@@ -8,9 +11,11 @@ import coverage from '@cypress/code-coverage/task'
 import browserify from '@cypress/browserify-preprocessor'
 import createBundler from '@bahmutov/cypress-esbuild-preprocessor'
 import { addCucumberPreprocessorPlugin } from '@badeball/cypress-cucumber-preprocessor'
-import createEsbuildPlugin from '@badeball/cypress-cucumber-preprocessor/esbuild'
+import { createEsbuildPlugin } from '@badeball/cypress-cucumber-preprocessor/esbuild'
 
-const { default: viteConfig } = require(path.resolve(rootDir, 'vite.config.ts'))
+const viteConfigPath = path.resolve(rootDir, 'vite.config.ts')
+
+const viteconfig = await import(viteConfigPath)
 // need to use require for now as importing default throws a type error at runtime
 
 export const setupNodeEvents = async (
@@ -37,7 +42,7 @@ export const setupNodeEvents = async (
     return devServer({
       ...options,
       viteConfig: {
-        ...viteConfig,
+        ...viteconfig,
         // configFile: path.resolve(rootDir, 'vite.config.ts'),
         define: {
           'process.env': process.env

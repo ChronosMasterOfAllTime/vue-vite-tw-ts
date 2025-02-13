@@ -4,12 +4,11 @@ import { ViteDevServerConfig } from '@cypress/vite-dev-server/dist/devServer'
 import { setupNodeEvents } from './test/e2e/plugins'
 import viteConfig from './vite.config'
 
-export default defineConfig({
+export default defineConfig<ViteDevServerConfig>({
   defaultCommandTimeout: 30000,
   requestTimeout: 30000,
   fileServerFolder: '.',
   fixturesFolder: 'test/e2e/fixtures',
-  experimentalFetchPolyfill: true,
   trashAssetsBeforeRuns: true,
   viewportWidth: 1440,
   viewportHeight: 990,
@@ -28,7 +27,7 @@ export default defineConfig({
     excludeSpecPattern: ['*.{ts,tsx,js,jsx}']
   },
   component: {
-    devServer(config: ViteDevServerConfig) {
+    devServer(config) {
       return devServer({
         ...config,
         framework: 'vue',

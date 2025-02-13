@@ -1,11 +1,13 @@
 /// <reference types="vitest" />
 
 import { defineConfig, Plugin } from 'vite'
-import vue from '@vitejs/plugin-vue'
-import tsconfigPaths from 'vite-tsconfig-paths'
 import IstanbulPlugin from 'vite-plugin-istanbul'
+import tailwindcss from '@tailwindcss/vite'
+import tailwindcssPostcss from '@tailwindcss/postcss'
+import tsconfigPaths from 'vite-tsconfig-paths'
+import vue from '@vitejs/plugin-vue'
 
-const plugins: Array<Plugin> = [vue(), tsconfigPaths()]
+const plugins: Array<Plugin> = [vue(), tsconfigPaths(), ...tailwindcss()] // NOTE: tailwind here appears to have no net effect, it's actually functioning via the poscss plugin below
 
 if (process.env.CYPRESS_TEST === 'true') {
   console.info('instrumenting code coverage for e2e tests...')
@@ -22,6 +24,11 @@ if (process.env.CYPRESS_TEST === 'true') {
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
   plugins,
+  css: {
+    postcss: {
+      plugins: [tailwindcssPostcss()]
+    }
+  },
   test: {
     server: {
       deps: {
