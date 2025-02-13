@@ -43,6 +43,6 @@ jobs:
       - name: setup e2e
         run: npm run test:e2e:setup
       - name: run e2e
-        run: npm run test:e2e:headless
+        run: env DEBUG=cypress:* npm run test:e2e:headless
       - name: run build
         run: npm run build
