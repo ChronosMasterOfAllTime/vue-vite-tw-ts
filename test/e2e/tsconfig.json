@@ -7,6 +7,7 @@
       "esnext",
       "dom"
     ],
+    "baseUrl": "../..",
     "types": [
       "cypress",
       "node"
@@ -18,7 +19,6 @@
     "noImplicitAny": false,
     "allowJs": true,
     "sourceMap": true,
-    "baseUrl": "../..",
     "paths": {
       "@e2e/*": [
         "test/e2e/*"
@@ -34,9 +34,9 @@
   },
   "include": [
     "./**/*.ts",
-    "../../node_modules/cypress"
+    "./node_modules/cypress"
   ],
   "exclude": [
-    "../../node_modules"
+    "./node_modules"
   ]
 }
