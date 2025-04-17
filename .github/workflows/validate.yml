@@ -41,10 +41,8 @@ jobs:
       - name: run tests
         run: npm run coverage
       - name: setup e2e
-        if: matrix.os != 'windows-latest'
         run: npm run test:e2e:setup
       - name: run e2e
-        if: matrix.os != 'windows-latest'
         run: npm run test:e2e:headless
       - name: run build
         run: npm run build
