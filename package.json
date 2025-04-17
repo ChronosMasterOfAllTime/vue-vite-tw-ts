@@ -12,8 +12,8 @@
     "test:watch": "vitest",
     "test:e2e:setup": "npm i -s && cypress cache clear && cypress install",
     "test:e2e:wsl": "env LIBGL_ALWAYS_INDIRECT=1 DISPLAY=:0 npm run test:e2e",
-    "test:e2e": "env CYPRESS_TEST=true concurrently -r \"npm run dev\" \"cypress open --project .\"",
-    "test:e2e:headless": "env CYPRESS_TEST=true concurrently -k -r -s first \"npm run dev\" \"cypress run --project .\"",
+    "test:e2e": "env NODE_OPTIONS=\"--experimental-specifier-resolution=node\" CYPRESS_TEST=true concurrently -r \"npm run dev\" \"cypress open --project .\"",
+    "test:e2e:headless": "env NODE_OPTIONS=\"--experimental-specifier-resolution=node\" CYPRESS_TEST=true concurrently -k -r -s first \"npm run dev\" \"cypress run --project .\"",
     "coverage": "npm run test -- --coverage",
     "lint": "eslint --fix src",
     "format": "prettier . --write"
@@ -29,9 +29,9 @@
     "vue-router": "^4.5.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.26.8",
-    "@babel/preset-env": "^7.26.8",
-    "@babel/types": "^7.26.8",
+    "@babel/core": "^7.26.10",
+    "@babel/preset-env": "^7.26.9",
+    "@babel/types": "^7.27.0",
     "@badeball/cypress-cucumber-preprocessor": "^22.0.1",
     "@bahmutov/cypress-esbuild-preprocessor": "^2.2.4",
     "@cypress/browserify-preprocessor": "^3.0.2",
