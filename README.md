@@ -1,4 +1,6 @@
 ![validation status](https://github.com/ChronosMasterOfAllTime/vue-vite-tw-ts/actions/workflows/validate.yml/badge.svg)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FChronosMasterOfAllTime%2Fvue-vite-tw-ts.svg?type=small)](https://app.fossa.com/projects/git%2Bgithub.com%2FChronosMasterOfAllTime%2Fvue-vite-tw-ts?ref=badge_small)
+
 
 # Vue 3 + Typescript + Vite
 
