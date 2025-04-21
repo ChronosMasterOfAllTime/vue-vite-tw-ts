@@ -1,5 +1,10 @@
 <template>
-  <n-config-provider data-cy="app" :theme="theme" :class="{ dark: mode }">
+  <n-config-provider
+    data-cy="app"
+    :theme="theme"
+    :class="{ dark: mode }"
+    :theme-overrides="appTheme(darkMode)"
+  >
     <n-layout position="absolute">
       <n-layout-header style="height: 64px; padding: 24px" bordered>
         <div class="text-right">
@@ -49,6 +54,7 @@
 <script setup lang="ts">
 import { darkTheme, lightTheme } from 'naive-ui'
 import { computed, ref, watchEffect } from 'vue'
+import { appTheme } from '@/lib'
 
 const darkStore = localStorage.getItem('dark')
 const prefersDark: boolean = darkStore
@@ -56,6 +62,8 @@ const prefersDark: boolean = darkStore
   : window.matchMedia('(prefers-color-scheme: dark)').matches
 
 const mode = ref<boolean>(prefersDark)
+const darkMode = computed(() => mode.value)
+
 const theme = computed(() => (mode.value ? darkTheme : lightTheme))
 
 watchEffect(() => {
