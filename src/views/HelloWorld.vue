@@ -77,7 +77,7 @@ const message = computed(() => {
 const variant = computed(() => {
   if (main.count >= 60) return 'error'
   if (main.count > 10) return 'success'
-  return 'default'
+  return 'primary'
 })
 </script>
 
