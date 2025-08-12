@@ -49,6 +49,6 @@ export default defineConfig(({ mode }) => ({
     sourcemap: mode === 'production' ? false : 'inline'
   },
   server: {
-    port: 3000
+    port: 1337
   }
 }))

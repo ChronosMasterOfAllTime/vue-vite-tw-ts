@@ -15,10 +15,10 @@ export default defineConfig<ViteDevServerConfig>({
   env: {
     CYPRESS_COVERAGE: 'true',
     TAGS: 'not @ignore',
-    BASE_URL: 'http://localhost:3000'
+    BASE_URL: 'http://localhost:1337'
   },
   e2e: {
-    baseUrl: 'http://localhost:3000',
+    baseUrl: 'http://localhost:1337',
     // We've imported your old cypress plugins here.
     // You may want to clean this up later by importing these.
     setupNodeEvents,

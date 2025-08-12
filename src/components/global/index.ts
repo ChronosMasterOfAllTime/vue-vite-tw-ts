@@ -1,4 +1,9 @@
-import vendorPlugins from './vendor'
+import vendorPlugins, {
+  getFontAwesomeComponent,
+  getIcon,
+  getIconHTML,
+  IconName
+} from './vendor'
 import { App, Plugin } from 'vue'
 
 const globalPlugins = [...vendorPlugins]
@@ -10,3 +15,5 @@ export const globalComponents = {
     }
   }
 } as Plugin
+
+export { getFontAwesomeComponent, getIcon, getIconHTML, IconName }
