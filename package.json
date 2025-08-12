@@ -54,7 +54,7 @@
     "@typescript-eslint/eslint-plugin": "^8.24.0",
     "@typescript-eslint/parser": "^8.24.0",
     "@vitejs/plugin-vue": "^5.2.3",
-    "@vitest/coverage-v8": "^3.1.1",
+    "@vitest/coverage-v8": "^3.2.4",
     "@vitest/ui": "^3.1.1",
     "@vue/compiler-dom": "^3.4.23",
     "@vue/compiler-sfc": "^3.4.23",
@@ -86,7 +86,7 @@
     "vite": "^6.3.1",
     "vite-plugin-istanbul": "^7.0.0",
     "vite-tsconfig-paths": "^5.1.4",
-    "vitest": "^3.1.1",
+    "vitest": "^3.2.4",
     "vue-tsc": "^2.2.0",
     "webpack": "^5.99.5"
   }
