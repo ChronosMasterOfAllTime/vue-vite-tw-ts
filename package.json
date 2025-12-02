@@ -58,7 +58,7 @@
     "@vitest/ui": "^3.2.4",
     "@vue/compiler-dom": "^3.4.23",
     "@vue/compiler-sfc": "^3.4.23",
-    "@vue/server-renderer": "^3.4.33",
+    "@vue/server-renderer": "^3.5.22",
     "@vue/test-utils": "^2.4.6",
     "autoprefixer": "^10.4.20",
     "babel-loader": "^9.2.1",
