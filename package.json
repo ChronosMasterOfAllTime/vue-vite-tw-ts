@@ -67,7 +67,7 @@
     "cypress": "^14.3.0",
     "esbuild": "^0.25.2",
     "eslint": "^9.36.0",
-    "eslint-config-prettier": "^10.0.1",
+    "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-vue": "^10.5.0",
     "happy-dom": "^20.0.2",
     "naive-ui": "^2.41.0",
