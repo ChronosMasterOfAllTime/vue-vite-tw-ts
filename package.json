@@ -88,6 +88,6 @@
     "vite-tsconfig-paths": "^5.1.4",
     "vitest": "^3.2.4",
     "vue-tsc": "^2.2.0",
-    "webpack": "^5.102.1"
+    "webpack": "^5.105.0"
   }
 }
